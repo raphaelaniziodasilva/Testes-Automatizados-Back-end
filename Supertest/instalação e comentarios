@@ -1,0 +1,30 @@
+Para a API vamos criar testes um pouquinhos diferentes que chamamos de super testes
+O super testes eles servem para testar os HTTP
+E também um pacote assim como o jest que vai se integrar com o jest, os dois em conjuntos conseguem testar as requisições HTTP
+
+Instalação:
+npm init -y
+npm add express --> precisamos do express pois vamos criar uma api
+npm add typescript
+npm add --save-dev supertest nodemon jest ts-jest ts-node @types/jest @types/supertest @types/express @types/typescript
+
+Iniciando o typescript:
+criando pastas
+mkdir src, dist
+na pasta src vai ficar os arquivos ts e na pasta dist os arquivos js
+npx tsc --init --rootDir src --outDir dist
+
+Vamos adicionar algumas coisas dentro das config do arquivo typescript
+
+Agora falaremos sobre testes de API do super testes. Vamos fazer umas configurações dentro do packjson para o arquivo package.json que são essas: 
+"scripts": {
+    "test": "jest --coverage",          --> Quando utilizamos o jest --coverage ele vai dizer o seguinte as informações dos testes que forem executadas aqui você vai coletar elas e vai jogar no console tudo que acontecer vai reportar no console
+
+    "dev": "nodemon ./src/server.ts", -->           Vai monitorar as configurações que esta no server.ts. O nodemon ele e uma suit de aplicativo para desenvolvimento que fornece varias funcionalidades
+
+    "build": "tsc" -->          vai executar o tsc quando rodarmos o build vai usar o typescript
+
+    Agora vamos utilizar no terminal o comando que acabamos de criar que e o npm run dev
+},
+
+Agora vamos começar a desenvolver os nossos testes crie uma pasta para testes
