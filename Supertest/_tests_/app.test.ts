@@ -9,7 +9,7 @@ describe("Tests app.ts", () => {
     test("Catch-All route", async() => {
         // Agora vamos testas algumas coisas que so consigo testar por conta do supertest
         const res = await request(app).get("/")
-        expect(res.body).toEqual({message: "Allo programador."})
+        expect(res.body).toEqual({message: "Allo programador"})
     })
 })
 
